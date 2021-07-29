@@ -1,6 +1,6 @@
 let connection;
 
-const inputObject = {'w': 'Move: up', 'a': 'Move: left', 's': 'Move: down', 'd': 'Move: right'}
+const inputObject = {'w': 'Move: up', 'a': 'Move: left', 's': 'Move: down', 'd': 'Move: right', 'q': "Say: SNAKE"}
 
 const handleUserInput = function (key) {
   //handleUserInput(key);  
@@ -10,9 +10,7 @@ const handleUserInput = function (key) {
 
    if (inputObject.hasOwnProperty(key)){
     connection.write(inputObject[key]);
-
    }
-   
 };
 
 const setupInput = function (conn) {
